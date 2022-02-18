@@ -125,9 +125,11 @@ export default class PantryContainer extends Component {
 						<button onClick={() => this.handleDelete(pantry.id)}>Delete</button>
 					</div>
 				))}
-
+        <br/>
+        <div className="addNewX">
 				<PantryNewForm addPantry={this.addPantry} baseUrl={this.state.baseUrl} getPantrys={this.getPantrys} />
-				<br/>
+        </div>
+        <br/>
 				{
 				this.state.modalOpen &&
 				<form onSubmit={this.editSubmit}>

@@ -34,13 +34,17 @@ body {
 
 .pantryCard{
   display: flex;
+  background-color: #bda8a8e6;
 }
 
 .title{
   font: white;
 }
 
-
+.whip{
+  background-color: #bda8a8e6;
+  padding: 8em;
+}
 
 .outer {
   display: flex;

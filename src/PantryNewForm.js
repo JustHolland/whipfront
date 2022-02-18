@@ -58,7 +58,7 @@ class PantryNewForm extends Component {
 			<div className="addnew">
 
 			<form onSubmit={this.handleSubmit}>
-			<h4>Add a New Pantry</h4>
+			<h4>Add New Item to Pantry</h4>
 					<div className="form-group">
 						<input type="text" className="form-control" name="item" placeholder="item" id="item" onChange = {(e) => this.handleChange(e)} />
 					</div>
