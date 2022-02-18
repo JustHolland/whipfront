@@ -8,7 +8,7 @@ export default class PantryContainer extends Component {
 
 		this.state = {
 			baseUrl: this.props.baseUrl,
-			pantrysList: [],
+			pantrys: [],
 			modalOpen: false,
 			pantryToBeEdited: {}
 		}
@@ -27,17 +27,17 @@ export default class PantryContainer extends Component {
 		}).then(data => {
 			console.log(data);
 			this.setState({
-				pantrysList: data.data
+				pantrys: data.data
 			})
 		})
 	}
 
 
 	addPantry = (newPantry) => {
-		const copyNewPantry = [...this.state.pantrysList]
+		const copyNewPantry = [...this.state.pantrys]
 		copyNewPantry.push(newPantry)
 		this.setState({
-			pantrysList: copyNewPantry
+			pantrys: copyNewPantry
 		})
 	}
 
@@ -95,11 +95,11 @@ export default class PantryContainer extends Component {
 		}).then(res => {
 			console.log(res)
 			if (res.status === 200){
-				const findIndex = this.state.pantrysList.findIndex(pantry => pantry.id === pantry)
-				const copyPantry = [...this.state.pantrysList]
+				const findIndex = this.state.pantrys.findIndex(pantry => pantry.id === pantry)
+				const copyPantry = [...this.state.pantrys]
 				copyPantry.splice(findIndex, 1)
 				this.setState({
-					pantrysList: copyPantry
+					pantrys: copyPantry
 				})
 				this.getPantrys()
 			}
@@ -118,7 +118,7 @@ export default class PantryContainer extends Component {
 			<div className="pantryCard">
 				<h2>Current Inventory</h2>
         <br/>
-				{this.state.pantrysList.map((pantry, i) => (
+				{this.state.pantrys.map((pantry, i) => (
 					<div key={i}>
 						<h4>{pantry.item}</h4>
 						<button onClick={() => this.showEditForm(pantry)}>Edit</button>
