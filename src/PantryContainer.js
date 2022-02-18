@@ -108,10 +108,10 @@ export default class PantryContainer extends Component {
 
 
 
-	componentDidMount(){
-		this.getPantrys()
-
-	}
+	// componentDidMount(){
+	// 	this.getPantrys()
+  //
+	// }
 
 	render(){
 		return (
