@@ -7,7 +7,7 @@ export default class PantryContainer extends Component {
 	super(props)
 
 		this.state = {
-			baseUrl: 'http://localhost:8000/api/v1/pantrys/',
+			baseUrl: this.props.baseUrl,
 			pantrysList: [],
 			modalOpen: false,
 			pantryToBeEdited: {}

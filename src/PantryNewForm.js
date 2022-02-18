@@ -9,7 +9,7 @@ class PantryNewForm extends Component {
 			catergory: '',
 			quantity: '',
 			owner: '',
-			baseURL: 'http://localhost:8000/api/v1/pantrys/'
+			baseURL: this.props.baseUrl,
 		}
 	}
 

@@ -176,7 +176,7 @@ componentDidMount() {
           <Route path='/' element={<Home />} />
           <Route path='/register' element={<SignUp signUp={this.signUp}/>} />
           <Route path='/login' element={<Login login={this.login}/>} />
-          <Route path='/pantrys' element={<PantryContainer pantrys={this.state.pantrys}/>} />
+          <Route path='/pantrys' element={<PantryContainer pantrys={this.state.pantrys} baseUrl={baseUrl}/>} />
           <Route path="/whip" element={<Whip/>} />
         </Routes>
       </div>
