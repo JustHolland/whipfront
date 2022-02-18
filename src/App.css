@@ -6,8 +6,15 @@ body {
   background-image: url("https://i.imgur.com/9J9WLTE.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: grey;
 
 
+
+}
+
+.signForm{
+  background-color: #bda8a8e6;
+  padding: 4em;
 
 }
 .h1, h1 {
@@ -94,7 +101,7 @@ body {
   align-items: flex-end;
   align-content: space-around;
   justify-content: space-around;
-  background-color: white;
+  background-color: #bda8a8e6;
   padding: 4em;
 }
 

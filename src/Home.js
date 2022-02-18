@@ -38,25 +38,10 @@ function Home() {
   };
 
   return (
-    <div className="App">
+    <div className="home">
       <h1>Welcome to Whip</h1>
       <h2> Search for Recipes by ingredients</h2>
-      <form onSubmit={onSubmit} className="search-form">
-        {alert !== "" && <Alert alert={alert} />}
-        <input
-          type="text"
-          name="query"
-          onChange={onChange}
-          value={query}
-          autoComplete="off"
-          placeholder="Search Food"
-        />
-        <input type="submit" value="Search" />
-      </form>
-      <div className="recipes">
-        {recipes !== [] &&
-          recipes.map(recipe => <Recipe key={uuidv4()} recipe={recipe} />)}
-      </div>
+    
     </div>
   );
 }

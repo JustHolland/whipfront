@@ -3,9 +3,9 @@ import React, { Component } from "react";
 export default class Login extends Component {
     render() {
         return (
-            <form>
+            <form className="signForm">
                 <h3>Sign In</h3>
-                <div className="form-group">
+                <div>
                     <label>Email address</label>
                     <input type="email" className="form-control" placeholder="Enter email" />
                 </div>

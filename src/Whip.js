@@ -7,7 +7,7 @@ const Whip = () => {
   const APP_KEY = "482b0a6b7f7fc8235ab35336a84a3d99";
   const [recipes, setRecipes] = useState([]);
   const [search, setSearch] = useState("");
-  const [query, setQuery] = useState("chicken");
+  const [query, setQuery] = useState("");
 
   useEffect(() => {
     getRecipes();
@@ -28,7 +28,9 @@ const Whip = () => {
     setQuery(search);
   };
   return (
-    <div className="App">
+    <div className="whip">
+      <h1>Search Based off Ingredients</h1>
+    
       <form className="search-form" onSubmit={getSearch}>
         <input
           type="text"
