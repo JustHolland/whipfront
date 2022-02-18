@@ -24,7 +24,7 @@ class PantryNewForm extends Component {
 
 	handleSubmit = (e) => {
 		e.preventDefault()
-		fetch(this.state.baseURL , {
+		fetch(this.state.baseURL + "/api/v1/pantrys" , {
 			method: 'POST',
 			body: JSON.stringify({
 				item: this.state.item,
