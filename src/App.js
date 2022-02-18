@@ -1,17 +1,16 @@
 
 import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css'
+
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import { Routes, Route, Link } from "react-router-dom";
 import React, { Component } from 'react'
-
 import Home from './Home'
 import PantryContainer from './PantryContainer'
-import RecipeContainer from './RecipeContainer'
+import Whip from './Whip'
 import Login from "./Login";
 import SignUp from "./SignUp"
-import Feed from './feed';
-import Recipe from './recipeinfo';
+import Recipe from './Recipe';
+
 
 
 let baseUrl = 'http://localhost:8000'
@@ -24,10 +23,19 @@ class App extends Component {
       pantrys: [],
       recipes: [],
 
+
     }
   }
 
-
+  getRecipes = () => {
+     fetch("https://api.edamam.com/search?q=chicken&app_id=4e9f05eb&app_key=9b904d703fa0d46a88ce1ac63f29f498")
+       .then((res) => res.json())
+       .then((json) =>
+         this.setState({
+           recipes: json,
+         })
+       );
+   };
 getPantrys = () => {
   // fetch to the backend
   fetch(baseUrl + "/api/v1/pantrys/",{
@@ -126,6 +134,7 @@ handleChange = (e)=>{
 
 componentDidMount() {
   this.getPantrys()
+  this.getRecipes()
 }
 
  render () {
@@ -146,11 +155,9 @@ componentDidMount() {
                   <Link className="nav-link"  to="/pantrys">List All Pantrys</Link>
                   </li>
                 <li className="nav-item">
-                  <Link className="nav-link"  to="/recipes">Find A Recipe</Link>
+                  <Link className="nav-link"  to="/whip">Find A Recipe</Link>
                   </li>
-                  <li className="nav-item">
-                    <Link className="nav-link"  to="/feeds">Find A Recipe</Link>
-                    </li>
+
                </ul>
                  </div>
                </div>
@@ -161,11 +168,7 @@ componentDidMount() {
           <Route path='/register' element={<SignUp signUp={this.signUp}/>} />
           <Route path='/login' element={<Login login={this.login}/>} />
           <Route path='/pantrys' element={<PantryContainer pantrys={this.state.pantrys}/>} />
-          <Route path="/recipes" element={<RecipeContainer recipes={this.state.recipes}/>} />
-
-
-
-
+          <Route path="/whip" element={<Whip/>} />
         </Routes>
       </div>
 

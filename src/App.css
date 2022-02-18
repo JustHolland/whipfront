@@ -8,6 +8,21 @@ body {
   background-size: cover;
 
 
+
+}
+.h1, h1 {
+    font-size: 2.5rem;
+    color: white;
+}
+
+.h2, h2 {
+  font-size: 2.5rem;
+  color: white;
+}
+
+.alert{
+  color: white;
+  background-color: red;
 }
 
 .pantryCard{
@@ -20,14 +35,14 @@ body {
 
 
 
-/* .outer {
+.outer {
   display: flex;
   justify-content: center;
   flex-direction: column;
   text-align: left;
-} */
+}
 
-/* .inner {
+ .inner {
   width: 450px;
   margin: auto;
   background: #ffffff;
@@ -35,23 +50,23 @@ body {
   padding: 40px 55px 45px 55px;
   border-radius: 15px;
   transition: all .3s;
-} */
+}
 
-/* .outer .form-control:focus {
+ .outer .form-control:focus {
   border-color: #167bff;
   box-shadow: none;
-} */
-
-/* .outer h3 {
+}
+.outer h3 {
   text-align: center;
   margin: 0;
   line-height: 1;
   padding-bottom: 20px;
+  color: white;
 }
 
 .custom-control-label {
   font-weight: 700;
-} */
+}
 
 .forgot-password,
 .forgot-password a {
@@ -66,6 +81,12 @@ body {
   color: #167bff;
 }
 
+.pantryCard{
+  display: flex;
+  padding:
+
+}
+
 .addnew{
   display: flex;
   flex-direction: row;
@@ -74,7 +95,7 @@ body {
   align-content: space-around;
   justify-content: space-around;
   background-color: white;
-  padding: 8em;
+  padding: 4em;
 }
 
 
