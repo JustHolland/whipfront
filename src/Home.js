@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <>
         <main>
-          <h1>Welcome to Whip</h1>
+          <h2>Welcome to Whip</h2>
           <p> what can you make </p>
         </main>
     </>
