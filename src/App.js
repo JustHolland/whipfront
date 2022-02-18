@@ -13,7 +13,16 @@ import Recipe from './Recipe';
 
 
 
-let baseUrl = 'http://localhost:8000'
+let baseUrl;
+
+if (process.env.NODE_ENV === 'development') {
+  baseUrl = 'http://localhost:8000';
+} else {
+  // "https://fathomless-sierra-68956.herokuapp.com" in this case is the *API* url
+  baseUrl = 'https://jwhip.herokuapp.com';
+}
+
+console.log('current base Url:', baseUrl)
 
 class App extends Component {
   constructor(props) {
