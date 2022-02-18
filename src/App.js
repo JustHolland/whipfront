@@ -47,9 +47,7 @@ class App extends Component {
    };
 getPantrys = () => {
   // fetch to the backend
-  fetch(baseUrl + "/api/v1/pantrys",{
-    credentials: "include"
-  })
+  fetch(baseUrl + "/api/v1/pantrys")
   .then(res => {
     if(res.status === 200) {
       return res.json()
@@ -65,7 +63,7 @@ getPantrys = () => {
 addPantry= () => {
   // fetch to the backend
   fetch(baseUrl + "/api/v1/pantrys/",{
-    credentials: "include"
+
   })
   .then(res => {
     if(res.status === 200) {
@@ -94,8 +92,7 @@ loginUser = async (e) => {
       body: JSON.stringify(loginBody),
       headers: {
         'Content-Type': 'application/json'
-      },
-      credentials: "include"
+      }
     })
 
     console.log(response)

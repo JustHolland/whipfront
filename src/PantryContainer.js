@@ -14,23 +14,23 @@ export default class PantryContainer extends Component {
 		}
 	}
 
-	// getPantrys = () => {
-	// 	fetch(this.state.baseUrl, {
-	// 	})
-	// 	.then(res => {
-	// 		console.log(res.status)
-	// 		if (res.status === 200) {
-	// 			return res.json()
-	// 		} else {
-	// 			return []
-	// 		}
-	// 	}).then(data => {
-	// 		console.log(data);
-	// 		this.setState({
-	// 			pantrys: data.data
-	// 		})
-	// 	})
-	// }
+	getPantrys = () => {
+		fetch(this.state.baseUrl + "api/v1/pantrys", {
+		})
+		.then(res => {
+			console.log(res.status)
+			if (res.status === 200) {
+				return res.json()
+			} else {
+				return []
+			}
+		}).then(data => {
+			console.log(data);
+			this.setState({
+				pantrys: data.data
+			})
+		})
+	}
 
 
 	addPantry = (newPantry) => {
@@ -108,10 +108,10 @@ export default class PantryContainer extends Component {
 
 
 
-	// componentDidMount(){
-	// 	this.getPantrys()
-  //
-	// }
+	componentDidMount(){
+		this.getPantrys()
+
+	}
 
 	render(){
 		return (
