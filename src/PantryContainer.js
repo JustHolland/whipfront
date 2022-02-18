@@ -15,7 +15,7 @@ export default class PantryContainer extends Component {
 	}
 
 	getPantrys = () => {
-		fetch(this.state.baseUrl + "api/v1/pantrys", {
+		fetch(this.state.baseUrl + "/api/v1/pantrys", {
 		})
 		.then(res => {
 			console.log(res.status)
