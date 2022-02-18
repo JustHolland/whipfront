@@ -8,29 +8,29 @@ export default class PantryContainer extends Component {
 
 		this.state = {
 			baseUrl: this.props.baseUrl,
-			pantrys: [],
+			pantrys: this.props.pantrys,
 			modalOpen: false,
 			pantryToBeEdited: {}
 		}
 	}
 
-	getPantrys = () => {
-		fetch(this.state.baseUrl, {
-		})
-		.then(res => {
-			console.log(res.status)
-			if (res.status === 200) {
-				return res.json()
-			} else {
-				return []
-			}
-		}).then(data => {
-			console.log(data);
-			this.setState({
-				pantrys: data.data
-			})
-		})
-	}
+	// getPantrys = () => {
+	// 	fetch(this.state.baseUrl, {
+	// 	})
+	// 	.then(res => {
+	// 		console.log(res.status)
+	// 		if (res.status === 200) {
+	// 			return res.json()
+	// 		} else {
+	// 			return []
+	// 		}
+	// 	}).then(data => {
+	// 		console.log(data);
+	// 		this.setState({
+	// 			pantrys: data.data
+	// 		})
+	// 	})
+	// }
 
 
 	addPantry = (newPantry) => {

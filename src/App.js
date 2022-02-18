@@ -47,7 +47,7 @@ class App extends Component {
    };
 getPantrys = () => {
   // fetch to the backend
-  fetch(baseUrl + "/api/v1/pantrys/",{
+  fetch(baseUrl + "/api/v1/pantrys",{
     credentials: "include"
   })
   .then(res => {
